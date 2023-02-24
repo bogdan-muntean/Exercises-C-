@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
 void citire_matrice(int matrice[][320], int n){
@@ -20,6 +21,7 @@ void afisare_matrice(int matrice[][320], int n){
     cout << "\n";
 }
 
+//Inversare
 void I (int matrice[][320], int n){
     for(int i = 0; i < n; i++){
         for(int j = 0; j < n; j++){
@@ -29,6 +31,7 @@ void I (int matrice[][320], int n){
     cout << "\n";
 }
 
+//Rotire
 void R (int a[][320], int n){
     int aux[320][320];
     for(int i = 0; i < n; i++)
@@ -40,7 +43,7 @@ void R (int a[][320], int n){
             a[i][j] = aux[i][j];
 }
 
-
+//Zoom
 void Z (int a[][320], int &n){
     int aux[2*n][2*n];
     for(int i = 0; i < n; i++){
@@ -59,16 +62,24 @@ void Z (int a[][320], int &n){
 
 int main(){
     int n, imagine[320][320];
+    char operatiuni[5];
     cout << "Introduceti n care reprezinta numarul de linii si de coloane: ";
     cin >> n;
+    citire_matrice(imagine, n); 
+    cout << "Limita este de 4 operatiuni, ele pot fi I/R/Z. Introduceti operatiunile dorite: \n";
+    cin >> operatiuni;
 
-    citire_matrice(imagine, n);
+    cout << "Matricea declarata este: \n";
     afisare_matrice(imagine, n);
-    I(imagine, n);
-    afisare_matrice(imagine, n);
-    R(imagine, n);
-    afisare_matrice(imagine, n);
-    Z(imagine, n);
+    for(int i = 0; i < strlen(operatiuni); i++){
+        if(operatiuni[i] == 'I')
+            I(imagine, n);
+        if(operatiuni[i] == 'R')
+            R(imagine, n);
+        if(operatiuni[i] == 'Z')
+            Z(imagine, n);
+    }
+    cout << "Matricea rezultata este: \n";
     afisare_matrice(imagine, n);
 
     return 0;
