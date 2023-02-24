@@ -9,7 +9,7 @@ int main() {
     cout << x << y << z << endl;
 
     // 3 numere întregi citite separat, cu spaţiu între ele 
-    cout << "Introdu 3 numbere: \n";
+    cout << "Introdu 3 numere: \n";
     cout << "a = ";
     cin >> a;
     cout << "b = ";
