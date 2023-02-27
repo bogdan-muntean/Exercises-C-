@@ -2,10 +2,10 @@
 using namespace std;
 
 int main () {
-    long n, g;
+    long long n, S;
     cin >> n;
-    g = n * (n + 1) / 2;
-    cout << g;
+    S = n * (n + 1) / 2;
+    cout << S;
     return 0;
 }
 
