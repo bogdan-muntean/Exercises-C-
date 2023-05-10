@@ -1,7 +1,6 @@
 Repository-ul contine:
 
-1. Informatii cu exemple din tematica pentru examen UBB matematica-informatica.
+1. Exercitii in limbajul C++.
 
-2. Exercitii in limbajul C++.
+2. Algoritmi in C++
 
-3. Simulari de admitere si Examene de admitere rezolvate.
